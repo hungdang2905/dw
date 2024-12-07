@@ -32,47 +32,38 @@ public class LotteryResults {
 	public static final int GDB = 32;
 
 	public static void setPrize(int index, String prize, LotteryItem lotteryItem) {
-		switch (index) {
-		case G8: {
-			lotteryItem.setPrize_eight(prize.substring(1, prize.length()));
-			break;
-		}
-		case G7: {
-			lotteryItem.setPrize_seven(prize.substring(1, prize.length()));
-			break;
-		}
-		case G6: {
-			lotteryItem.setPrize_six(prize.substring(1, prize.length()));
-			break;
-		}
-		case G5: {
-			lotteryItem.setPrize_five(prize.substring(1, prize.length()));
-			break;
-		}
-		case G4: {
-			lotteryItem.setPrize_four(prize.substring(1, prize.length()));
-			break;
-		}
-		case G3: {
-			lotteryItem.setPrize_three(prize.substring(1, prize.length()));
-			break;
-		}
-		case G2: {
-			lotteryItem.setPrize_two(prize.substring(1, prize.length()));
-			break;
-		}
-		case G1: {
-			lotteryItem.setPrize_one(prize.substring(1, prize.length()));
-			break;
-		}
-		case GDB: {
-			lotteryItem.setPrize_special(prize.substring(1, prize.length()));
-			break;
-		}
-		default:
-			throw new IllegalArgumentException("Unexpected value: " + index);
-		}
+	    switch (index) {
+	        case G8:
+	            lotteryItem.setPrize_eight(prize.substring(1, prize.length()));
+	            break;
+	        case G7:
+	            lotteryItem.setPrize_seven(prize.substring(1, prize.length()));
+	            break;
+	        case G6:
+	            lotteryItem.setPrize_six(prize.substring(1, prize.length()));
+	            break;
+	        case G5:
+	            lotteryItem.setPrize_five(prize.substring(1, prize.length()));
+	            break;
+	        case G4:
+	            lotteryItem.setPrize_four(prize.substring(1, prize.length()));
+	            break;
+	        case G3:
+	            lotteryItem.setPrize_three(prize.substring(1, prize.length()));
+	            break;
+	        case G2:
+	            lotteryItem.setPrize_two(prize.substring(1, prize.length()));
+	            break;
+	        case G1:
+	            lotteryItem.setPrize_one(prize.substring(1, prize.length()));
+	            break;
+	        case GDB:
+	            lotteryItem.setPrize_special(prize.substring(1, prize.length()));
+	            break;
+	       
+	    }
 	}
+
 
 	public static List<LotteryItem> getData(Config config) throws IOException {
 //		6.1 Tạo List LotteryItem rỗng

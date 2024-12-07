@@ -114,8 +114,8 @@ public class Staging {
                 System.out.println("Kiểm tra tiến trình source to csv thành công");
                 writeLog(conn, "check_csv","Tồn tại","Đã có file csv hôm nay");
 
-//                String filePath = "D:\\DW\\"+LocalDateTime.now().getDayOfMonth()+LocalDateTime.now().getMonthValue()+LocalDateTime.now().getYear()+"_xsmn.csv";
-                String filePath = "D:\\DW\\6122024_xsmn.csv ";
+                String filePath = "D:\\DW\\"+LocalDateTime.now().getDayOfMonth()+LocalDateTime.now().getMonthValue()+LocalDateTime.now().getYear()+"_xsmn.csv";
+//                String filePath = "D:\\DW\\6122024_xsmn.csv ";
                 File file = new File(filePath);
 
                 try (BufferedReader br = new BufferedReader(new FileReader(file))) {
