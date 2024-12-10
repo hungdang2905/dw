@@ -145,9 +145,12 @@ public class Staging {
     /* Gửi email thông báo xự kiện insert đã diễn ra*/
     private static void sendEmail(String messageBody) {
         Email email = new Email();
+
         email.setFrom("hung.290502@gmail.com");
         email.setFromPassword("naaa ageg uqfw uozm");
         email.setTo("20130271@st.hcmuaf.edu.vn");
+
+      
         email.setSubject("Notifications");
         StringBuilder sb = new StringBuilder();
         sb.append(messageBody);
