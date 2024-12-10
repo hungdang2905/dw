@@ -18,9 +18,9 @@ import java.util.List;
 import java.util.Properties;
 
 public class GetDataFromDWtoDM {
-    private static final String FROM_EMAIL = "20130115@st.hcmuaf.edu.vn";
-    private static final String PASSWORD = "huynhtham3008!!";
-    private static final String TO_EMAIL = "huynhtham3008@gmail.com";
+    private static final String FROM_EMAIL = "hung.290502@gmail.com";
+    private static final String PASSWORD = "naaa ageg uqfw uozm";
+    private static final String TO_EMAIL = "20130271@st.hcmuaf.edu.vn";
 
     public static void sendEmail(String subject, String body) {
         Properties props = new Properties();

@@ -1,6 +1,6 @@
-package loadToDatamart.dao;
+package warehouse.dao;
 
-import loadToDatamart.entity.Logs;
+import warehouse.entity.Logs;
 import org.jdbi.v3.core.Handle;
 
 import java.sql.Timestamp;
@@ -22,27 +22,21 @@ public class LogDAO {
             e.printStackTrace();
         }
     }
-
     public boolean isLastLogStatusRunning(String name, String event_type, String status) {
         try (Handle handle = DBContext.connectControl().open()) {
-            String query = "SELECT id,name, event_type, status, created_at FROM logs where  DATE(created_at)=DATE(now())  and status=? and event_type=? and name=? ORDER BY created_at DESC LIMIT 1";
+            String query = "SELECT id,name, event_type, status, created_at FROM logs where  DATE(created_at)=DATE(now())  and status=? ORDER BY created_at DESC LIMIT 1";
 
-            Optional<Logs> lastLog = handle.createQuery(query).bind(0,status).bind(1,event_type).bind(2,name)
+            Optional<Logs> lastLog = handle.createQuery(query).bind(0,status)
                     .mapToBean(Logs.class) // Assuming you have a Log class that corresponds to the 'logs' table
                     .findOne();
-            return lastLog.isPresent();
+            return lastLog.isPresent() && status.equals(lastLog.get().getStatus()) && name.equals(lastLog.get().getName()) && event_type.equals(lastLog.get().getEvent_type());
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
-    
 
     public static void main(String[] args) {
-        System.out.println(new LogDAO().isLastLogStatusRunning("xosohomnay","Load data to datawarehouse","Success"));
 
     }
-
-
-
 }

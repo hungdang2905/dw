@@ -1,15 +1,13 @@
-package loadToDatamart.entity;
+package warehouse.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-public class RewardDim {
+@Getter
+public class Reward_dim {
     private int id;
     private String special_prize;
     private String eighth_prize;
@@ -95,5 +93,4 @@ public class RewardDim {
 		this.type = type;
 	}
     
-
 }

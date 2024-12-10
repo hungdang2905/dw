@@ -110,8 +110,8 @@ public class ControlDAO {
                     .bind(6, "save file success")
                     .bind(7, now)
                     .bind(8, now)
-                    .bind(9,"Huỳnh Thị Thắm" )
-                    .bind(10, "Huỳnh Thị Thắm")
+                    .bind(9,"DVH" )
+                    .bind(10, "DVH")
                     .execute();
         } catch (Exception e) {
             e.printStackTrace();
